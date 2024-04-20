@@ -59,7 +59,7 @@ function route($method, $urlList, $requestData)
                 $idFitch = substr(getallheaders()['fitch_id'], 0);
                 $idTag = substr(getallheaders()['tag_id'], 0);
                 $tokenSelestResult = $link->query("SELECT * FROM tokens WHERE `value`='$token'")->fetch_assoc();
-                $tagSelestResult = $link->query("SELECT * FROM Banner_tags WHERE `Tag_ID`='$idTag'")->fetch_assoc();
+                $tagSelestResult = $link->query("SELECT * FROM Banner_Tags WHERE `Tag_ID`='$idTag'")->fetch_assoc();
                 $fitchSelestResult = $link->query("SELECT * FROM Banners WHERE `Feature_ID`='$idFitch'")->fetch_assoc();
                 if (empty($tokenSelestResult['role']) or ($tokenSelestResult['role'] != 'admin')) {
                     var_dump(http_response_code(403));
