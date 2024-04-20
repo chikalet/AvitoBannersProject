@@ -56,8 +56,8 @@ function route($method, $urlList, $requestData)
         switch ($urlList[1]) {
             case 'banner':
                 $token = substr(getallheaders()['Authorization'], 7);
-                $idFitch = substr(getallheaders()['fitch_id'], 0);
-                $idTag = substr(getallheaders()['tag_id'], 0);
+                $idFitch = $_GET['fitch_id'];
+                $idTag = $_GET['tag_id'];
                 $tokenSelestResult = $link->query("SELECT * FROM tokens WHERE `value`='$token'")->fetch_assoc();
                 $tagSelestResult = $link->query("SELECT * FROM Banner_Tags WHERE `Tag_ID`='$idTag'")->fetch_assoc();
                 $fitchSelestResult = $link->query("SELECT * FROM Banners WHERE `Feature_ID`='$idFitch'")->fetch_assoc();
