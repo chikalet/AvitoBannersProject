@@ -140,8 +140,9 @@ idTags:
 Localhost/banner (метод – GET)
 
 в headers - authorization введите токен админа: ea09b711300927150303db0a791d5b9f
-в headers создайте новое поле fitch_id
-в headers создайте новое поле tag_id
+в url запросе передайте fitch_id для фильтрации по фиче
+в url запросе передайте tag_id для фильтрации по тегу
+пример: http://localhost/banner/?tag_id=1&&fitch_id=1
 
 Условия:
 токен админа
@@ -168,7 +169,7 @@ idTags:
 
 Для удаления баннера
 
-Localhost/banner/13 (метод – PATCH) 13 – номер интересующего вас баннера
+Localhost/banner/13 (метод – DELETE) 13 – номер интересующего вас баннера
 
 в headers - authorization введите токен админа: ea09b711300927150303db0a791d5b9f
 
