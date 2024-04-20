@@ -8,8 +8,8 @@ function route($method, $urlList, $requestData)
             case 'action':
                 $activate = $requestData->body->activate;
                 if ($activate == 'activate') {
-                    $action = $link->query("SELECT * FROM Banner_Tags WHERE Banner_name='баннер скидки по кухонным изделиям'")->fetch_assoc();
-                    if ($action['id'] != 0) {
+                    $action = $link->query("SELECT * FROM Banner_Tags WHERE Banner_name='баннер скидки по кухонным изделиям'");
+                    if (!empty($action)) {
                         echo "таблицы созданы. Метод не может быть исполнен";
                         break;
                     } else {
