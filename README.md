@@ -44,7 +44,7 @@ localhost/action
 
 Для просмотра всех фич:
 
-Localhost/auth/ features (метод – GET)
+Localhost/auth/features (метод – GET)
 
 Для просмотра всех тегов:
 
@@ -52,7 +52,7 @@ Localhost/auth/tags (метод – GET)
 
 Для просмотра всех баннеров:
 
-Localhost/auth/Banners (метод – GET)
+Localhost/auth/banners (метод – GET)
 
 -----------------------------------------------------------------------------------
 
